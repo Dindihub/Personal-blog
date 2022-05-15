@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for,abort,flash
 from . import main
-# from ..requests import 
+import requests
 # from .forms import 
 # from ..models import User
 # from .. import db,photos
@@ -9,6 +9,12 @@ from . import main
 
 @main.route('/')
 def index():
+    quotes=requests.get('http://quotes.stormconsultancy.co.uk/random.json')
+    get_quotes=quotes.json()
+
+    return render_template('main/index.html',get_quotes=get_quotes)
 
 
-    return render_template('main/index.html')
+@main.route('/quotes',methods=['GET','POST'])
+def json_url():
+    return render_template('main/quotes.html')
