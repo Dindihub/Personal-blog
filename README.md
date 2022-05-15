@@ -1,39 +1,82 @@
-# Flask Strater Files
+# Sandy Blog
 
 ## Description
 
-Basic flask application starter files
+This Application that allows writers to post blogs, edit and delete blogs. It also allows users who have signed up to comment on the blogs that has been posted by a writer. It also allows a person to subscribed to recieve email everytime a new blog is posted by a writer.
+
 
 ## Author
 
-[]()
+Sandra Dindi
 
-### Running the Application
+You can view the site at:[]()
 
-1. Pre-requisites
+## User Stories
+As a user I would like to:
+* See various blogs posts 
+* Allowed to subscribe to email service 
+* Allowed to comment on blog posts
+* A writer allowed to register
+* A writer is allowed to Create blog,delete comments
+* A writer is able to comment on pitches
 
-   - Ensure to activate virtual environment called virtual,using:
 
-     - source virtual/bin/activate
 
-   - Install flask and pip
-   - Install flask_script
+## Specifications
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Display  blog posts | **On page load** | List of various blogs from writers is displayed in a page|
+| Display random quotes from API | **On Tab link click** | Clickable links to open quote origins|
+| Display tabs for login page  | **On page load** | Registered writers can log into their accounts and create,update and delete blogs and comments |
+| Display tabs for Signup | **On page load** | Signup users are redirected to Log in |
+| To create a blog post  | **On log in** |  writers  can create and post blogs|
+|Users can subscribe in | on subscription | users can comment on blog posts
 
-2. Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app ('development')
-3. Add the export configurations in a start.sh
 
-   - export SECRET_KEY= "Your secret key"
-   - export API_KEY= "Your Api key"
+## SetUp / Installation Requirements
+### Prerequisites
+* python3.8
+* pip venv
 
-4. Run using the executable file ,with command :
-   - ./start.sh
 
-## Contact Information
+### Cloning
+* In your terminal:
 
-For any further inquiries or contributions or comments, reach me at [Mugera Hughes](https://github.com/MugeraH)
+        $ git clone git@github.com:Dindihub/Personal-blog.git
+        $ cd personal-blog
+
+## Running the Application
+* Creating the virtual environment
+
+        $ pip install virtualenv 
+        $ virtualenv env
+        $ source env/bin/activate
+       
+
+
+* To run the application, in your terminal:
+
+        $ python3 manage.py 
+        $ flask run
+
+## Testing the Application
+* To run the tests for the class files:
+
+        $ python3  manage.py tests 
+
+## Technologies Used
+* Python3.8
+* Flask
+
+## Known Bugs
+No known bugs
 
 ### License
+MIT (c) 2022 **[Sandra Dindi](https://github.com/Dindihub/Personal-blog.git)**
 
-[MIT License](https://github.com/MugeraH/flask_code/blob/main/license)
 
-Copyright (c) 2021
+
+
+
+
+
