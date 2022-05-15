@@ -3,8 +3,6 @@
 <!-- Styles block -->
 
 
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
-
 <!-- Content block -->
 {% block content %}
 
@@ -12,7 +10,7 @@
   <h3>index</h3>
 </div>
 
-
+{% include 'main/quotes.html'%}
 
 
 {% endblock%}
