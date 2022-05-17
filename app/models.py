@@ -3,6 +3,19 @@ from flask_login import current_user,UserMixin
 from werkzeug.security import generate_password_hash,check_password_hash
 from datetime import datetime
 
+
+
+class Quotes:
+    '''
+    Quotes  class to define quotes Objects
+    '''
+    def __init__(self,id,author,quote,permalink):
+        self.id=id
+        self.author=author
+        self.quote=quote
+        self.permalink=permalink 
+        
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
@@ -94,8 +107,8 @@ class Subscriber(db.Model):
 
     id=db.Column(db.Integer,primary_key=True)
     email = db.Column(db.String(255),unique=True,index=True)
-    user_id = db.Column(db.Integer,db.ForeignKey('user.id'),nullable=False)
-    comment_id = db.Column(db.Integer,db.ForeignKey('comment.id'),nullable=False)
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'),nullable=False)
+    comment_id = db.Column(db.Integer,db.ForeignKey('comments.id'),nullable=False)
 
     def save_subscriber(self):
         db.session.add(self)

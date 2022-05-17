@@ -10,6 +10,8 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember me')
     submit = SubmitField('Sign In')
 
+
+
 class SignupForm(FlaskForm):
     email = StringField('Your Email Address',validators=[DataRequired(),Email()])
     username = StringField('Enter your username',validators = [DataRequired()])
@@ -24,6 +26,10 @@ class SignupForm(FlaskForm):
     def validate_username(self,data_field):
         if User.query.filter_by(username = data_field.data).first():
             raise ValidationError('That username is taken')
+
+
+
+
 
 class Subscriber(FlaskForm):
     email = StringField('Your Email Address',validators=[DataRequired(),Email()])

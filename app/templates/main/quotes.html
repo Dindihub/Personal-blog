@@ -1,3 +1,16 @@
-{{get_quotes.author}}
+<div class="row d-flex justify-content-center align-content-center mt-4">
+    <div class="col-lg-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <h4 class="heading "style="color:#00b33c">Daily quotes</h4>
+            </div>
 
-<h1>quotes</h1>
+            <div class="card-body">
+                <h5 class="card-title"><strong>Author: </strong> {{get_quotes.author}}</h5>
+                <p class="card-text">" {{get_quotes.quote}} "</p>
+                <a href="{{get_quotes.permalink}}" class="btn btn-success">See more quotes</a>
+            </div>
+            <div class="card-footer text-muted">2 days ago</div>
+        </div>
+    </div>
+</div>

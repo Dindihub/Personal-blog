@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+<div class="col " style="color:#000">
+      <h2 class="text-center" style="color:white"> ALL POSTS </h2>
+      <div class="row" >
+      
+        <div class="col-3 mx-4 mb-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Title:  {{post.title}}</h5>
+              <p class="card-header text" ><strong>Author:  </strong>{{post.author}}</p>
+              <p class="card-text row-10"><strong>Post:  </strong> {{post.content }}</p>
+      
+
+
+{% endblock %}
