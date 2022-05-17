@@ -7,10 +7,56 @@
 {% block content %}
 
 <div class="container-fluid m-5">
-  <h3>index</h3>
+ 
 </div>
 
+<div class="img-fluid d-flex justify-content-center align-content-center">
+<img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+</div>
+
+
+
+
 {% include 'main/quotes.html'%}
+
+
+<div class="container-fluid">
+<div class="col " style="color:#000">
+      <h2 class="text-center" style="color:white"> ALL POSTS </h2>
+      <div class="row" >
+       {% for post in posts %}
+        <div class="col-3 mx-4 mb-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Title:  {{post.title}}</h5>
+              <p class="card-header text" ><strong>Author:  </strong>{{post.author}}</p>
+              <p class="card-text row-10"><strong>Post:  </strong> {{post.content }}</p>
+
+             <!-- <form action="/comment/{{current_user.id}}/{{post.id}}" method="POST">
+               {{comment_form.csrf_token}}
+               <div class="form-outline">
+              {{comment_form.content(class="form-control")}}
+              {{comment_form.submit(class="btn btn-secondary")}}
+              
+              </div>
+              
+             </form> -->
+            <!-- {% for comment in pitch.comments%}
+              <p class="card-text row-10">{{comment.content}}</p>
+            {% endfor%}
+            </div>
+
+          </div>
+        </div>
+       {% endfor %} 
+      </div>
+    </div>
+
+</div>
+ -->
+
+
 
 
 {% endblock%}
