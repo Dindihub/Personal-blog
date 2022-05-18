@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    # UPLOADED_PHOTOS_DEST ='app/static/photos'
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     # API_KEY = os.environ.get('API_KEY')
     DEBUG = os.environ.get('DEBUG')
@@ -30,5 +30,5 @@ class DevConfig(Config):
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
-# 'test':TestConfig
+'test':TestConfig
 }
