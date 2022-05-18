@@ -1,2 +1,17 @@
+body{
+    background-attachment: fixed;
+    background: url(../photos/mark-harpur-K2s_YE031CA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(233, 224, 218);
+    min-height: 100vh; 
+    
+
+}
+
+
+
+
 
 
